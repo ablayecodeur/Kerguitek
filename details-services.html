@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebVision - Details des Services</title>
+    <link rel="stylesheet" href="details-services.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="images/icone-site-web1.webp" alt="" class="logo"></a>
+        <i class="fa-solid fa-bars menu" id="menu-toggle"></i>
+        <nav class="navbar" id="navbar">
+            <a href="index.html#accueil">Accueil</a>
+            <a href="index.html#a-propos">A propos</a>
+            <a href="index.html#services">Services</a>
+            <a href="index.html#realisations">Réalisations</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main class="service-details-container">
+        <!-- Section Hero Service -->
+        <section class="service-hero" id="service-hero">
+            <div class="service-hero-content">
+                <span class="section-subtitle">Nos expertises</span>
+                <h1 id="service-title">Développement Web</h1>
+                <p id="service-subtitle">Des solutions web sur mesure pour propulser votre business en ligne</p>
+            </div>
+        </section>
+
+        <!-- Content dynamique du service -->
+        <section class="service-content">
+            <div class="service-description">
+                <h2><i class="fas fa-info-circle"></i> À propos de ce service</h2>
+                <div id="service-about-text">
+                    <!-- Content injecté dynamiquement -->
+                </div>
+            </div>
+
+            <div class="service-features">
+                <h2><i class="fas fa-star"></i> Ce que nous offrons</h2>
+                <ul id="service-features-list">
+                    <!-- Contenu injecté dynamiquement -->
+                </ul>
+            </div>
+
+            <div class="service-process">
+                <h2><i class="fas fa-tasks"></i> Notre processus</h2>
+                <div class="process-steps" id="service-process-steps">
+                    <!-- Contenu injecté dynamiquement -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Tarifs -->
+        <section class="pricing-section">
+            <div class="section-header">
+                <span class="section-subtitle">Nos offres</span>
+                <h2 class="section-title">Nos tarifs</h2>
+                <p class="section-description">*Les prix sont indicatifs et varient selon la complexité de votre projet</p>
+            </div>
+
+            <div class="pricing-cards" id="service-pricing-cards">
+                <!-- Contenu injecté dynamiquement -->
+            </div>
+
+            <div class="cta-container">
+                <a href="index.html#contact" class="btn">Demander un devis personnalisé</a>
+                <p>Ou contactez-nous au <a href="tel:+221781234567" style="color: #2563eb;">+221 78 202 20 01</a></p>
+            </div>
+        </section>
+
+        <!-- Section Projets similaires -->
+        <section class="related-projects" style="display: none;">
+            <div class="section-header">
+                <span class="section-subtitle">Notre travail</span>
+                <h2 class="section-title">Projets similaires</h2>
+            </div>
+            <div class="projects-grid" id="related-projects-grid">
+                <!-- Contenu injecté dynamiquement -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>WebVision Sénégal</h3>
+                <p>Votre partenaire pour des solutions digitales innovantes et créatives.</p>
+                <div class="footer-logo">
+                    <span>Kergui</span>tek
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Liens rapides</h3>
+                <ul>
+                    <li><a href="index.html#accueil">Accueil</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#realisations">Réalisations</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact</h3>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Dakar | Sénégal | Parcelles Assainies</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <p>+221 78 202 20 01</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>kerguitek.221@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-social" style="display: none;">
+                <h3>Suivez-nous</h3>
+                <div class="social-icons" style="display: none;">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Kerguitek Sénégal. Tous droits réservés.</p>
+                <div class="legal-links" style="display: none;">
+                    <a href="#">Confidentialité</a>
+                    <a href="#">Conditions</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const serviceId = urlParams.get('service');
+
+        const servicesData = {
+            'web': {
+                title: "Développement Web",
+                subtitle: "Des solutions web sur mesure pour propulser votre business en ligne",
+                heroImage: "images/developpement-web.jpg",
+                aboutText: `
+                    <p>Notre équipe de développement crée des sites web performants, sécurisés et optimisés pour le référencement. Que vous ayez besoin d'un site vitrine, d'une plateforme e-commerce ou d'une application web complexe, nous avons l'expertise pour concrétiser votre vision.</p>
+                    <p>Nous utilisons les dernières technologies comme React, Vue.js, Node.js et des CMS modernes pour garantir des solutions évolutives et maintenables.</p>
+                `,
+                features: [
+                    "Sites vitrines responsives et modernes",
+                    "Boutiques en ligne avec paiements sécurisés",
+                    "Applications web sur mesure",
+                    "Intégration de systèmes tiers (API, CRM, etc.)",
+                    "Optimisation SEO et performances",
+                    "Maintenance et support continu"
+                ],
+                process: [
+                    {
+                        icon: "fas fa-lightbulb",
+                        title: "Consultation",
+                        text: "Nous analysons vos besoins et objectifs"
+                    },
+                    {
+                        icon: "fas fa-pencil-ruler",
+                        title: "Conception",
+                        text: "Création des maquettes et validation"
+                    },
+                    {
+                        icon: "fas fa-code",
+                        title: "Développement",
+                        text: "Implémentation technique avec tests rigoureux"
+                    },
+                    {
+                        icon: "fas fa-rocket",
+                        title: "Lancement",
+                        text: "Mise en ligne et formation"
+                    }
+                ],
+                pricing: [
+                    {
+                        name: "Starter",
+                        price: "150 000 FCFA",
+                        features: ["Site vitrine 5 pages", "Design responsive", "Formulaire de contact", "SEO de base", "1 mois de support"],
+                        best: false
+                    },
+                    {
+                        name: "Business",
+                        price: "350 000 FCFA",
+                        features: ["Site vitrine 10 pages", "E-commerce basique", "Paiements en ligne", "SEO avancé", "3 mois de support"],
+                        best: true
+                    },
+                    {
+                        name: "Premium",
+                        price: "Sur devis",
+                        features: ["Application web sur mesure", "Développements spécifiques", "Intégration API", "Maintenance annuelle", "Support prioritaire"],
+                        best: false
+                    }
+                ],
+                relatedProjects: [1, 4]
+            },
+            'design': {
+                title: "Création Graphique",
+                subtitle: "Une identité visuelle forte pour marquer les esprits",
+                heroImage: "images/community-manager.jpg",
+                aboutText: `
+                    <p>Notre équipe créative conçoit des identités visuelles mémorables qui reflètent l'essentiel de votre marque. Du logo aux supports print, nous créons une cohérence visuelle à travers tous vos canaux de communication.</p>
+                    <p>Nous combinons stratégie de marque, design thinking et tendances actuelles pour des résultats à la fois beaux et efficaces.</p>
+                `,
+                features: [
+                    "Logo et identité visuelle",
+                    "Charte graphique complète",
+                    "Design d'interface utilisateur",
+                    "Supports print (cartes, flyers, etc.)",
+                    "Packaging et merchandising",
+                    "Direction artistique"
+                ],
+                process: [
+                    {
+                        icon: "fas fa-search",
+                        title: "Recherche",
+                        text: "Analyse de votre secteur et concurrents"
+                    },
+                    {
+                        icon: "fas fa-brain",
+                        title: "Concept",
+                        text: "Développement des idées créatives"
+                    },
+                    {
+                        icon: "fas fa-palette",
+                        title: "Design",
+                        text: "Création des visuels et validation"
+                    },
+                    {
+                        icon: "fas fa-box-open",
+                        title: "Livrables",
+                        text: "Fourniture des fichiers sources et guides"
+                    }
+                ],
+                pricing: [
+                    {
+                        name: "Basic",
+                        price: "100 000 FCFA",
+                        features: ["Logo + variations", "Charte graphique simplifiée", "Cartes de visite", "Fichiers sources", "1 révision"],
+                        best: false
+                    },
+                    {
+                        name: "Complete",
+                        price: "250 000 FCFA",
+                        features: ["Identité visuelle complète", "Supports print (5 éléments)", "Guide de marque", "3 révisions", "Template social media"],
+                        best: true
+                    },
+                    {
+                        name: "Enterprise",
+                        price: "Sur devis",
+                        features: ["Direction artistique", "Packaging design", "Merchandising", "Visuels sur mesure", "Support illimité"],
+                        best: false
+                    }
+                ],
+                relatedProjects: [3]
+            },
+            'marketing': {
+                title: "Marketing Digital",
+                subtitle: "Boostez votre visibilité et attirez plus de clients",
+                heroImage: "images/marketing-digital.jpg",
+                aboutText: `
+                    <p>Nos stratégies de marketing digital augmentent votre présence en ligne et génèrent des leads qualifiés. Nous combinons SEO, publicité ciblée et contenu de qualité pour des campagnes performantes.</p>
+                    <p>Notre approche data-driven nous permet d'optimiser en continu vos performances pour un meilleur retour sur investissement.</p>
+                `,
+                features: [
+                    "Stratégie SEO complète",
+                    "Campagnes publicitaires (Google, Facebook)",
+                    "Gestion des réseaux sociaux",
+                    "Email marketing automatisé",
+                    "Analyse et reporting",
+                    "Optimisation des conversions"
+                ],
+                process: [
+                    {
+                        icon: "fas fa-chart-line",
+                        title: "Audit",
+                        text: "Analyse de votre présence actuelle"
+                    },
+                    {
+                        icon: "fas fa-chess",
+                        title: "Stratégie",
+                        text: "Plan d'action personnalisé"
+                    },
+                    {
+                        icon: "fas fa-bullhorn",
+                        title: "Implémentation",
+                        text: "Mise en œuvre des actions"
+                    },
+                    {
+                        icon: "fas fa-tachometer-alt",
+                        title: "Optimisation",
+                        text: "Suivi et ajustements"
+                    }
+                ],
+                pricing: [
+                    {
+                        name: "Essentiel",
+                        price: "90 000 FCFA/mois",
+                        features: ["Gestion 2 réseaux sociaux", "5 posts/mois", "Reporting mensuel", "SEO technique", "Publicité basique"],
+                        best: false
+                    },
+                    {
+                        name: "Pro",
+                        price: "150 000 FCFA/mois",
+                        features: ["Stratégie complète", "Gestion 4 réseaux", "Publicité avancée", "Email marketing", "Optimisation SEO"],
+                        best: true
+                    },
+                    {
+                        name: "Enterprise",
+                        price: "Sur devis",
+                        features: ["Stratégie 360°", "Campagnes multicanales", "Content marketing", "Analytics avancé", "Dédicated manager"],
+                        best: false
+                    }
+                ],
+                relatedProjects: [2]
+            }
+        };
+
+        if (serviceId && servicesData[serviceId]) {
+            const service = servicesData[serviceId];
+
+            // Mettre à jour le contenu
+            document.title = `WebVision - ${service.title}`;
+            document.getElementById('service-title').textContent = service.title;
+            document.getElementById('service-subtitle').textContent = service.subtitle;
+            document.querySelector('.service-hero').style.backgroundImage = `linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)), url(${service.heroImage})`;
+            document.getElementById('service-about-text').innerHTML = service.aboutText;
+
+            // Fonctionnalités
+            const featuresList = document.getElementById('service-features-list');
+            featuresList.innerHTML = "";
+            service.features.forEach(feature => {
+                const li = document.createElement('li');
+                li.innerHTML = `<i class="fas fa-check"></i> ${feature}`;
+                featuresList.appendChild(li);
+            });
+
+            // Processus
+            const processSteps = document.getElementById('service-process-steps');
+            processSteps.innerHTML = "";
+            service.process.forEach(step => {
+                const stepDiv = document.createElement('div');
+                stepDiv.className = 'process-step';
+                stepDiv.innerHTML = `
+                    <div class="process-icon">
+                        <i class="${step.icon}"></i>
+                    </div>
+                    <h3>${step.title}</h3>
+                    <p>${step.text}</p>
+                `;
+                processSteps.appendChild(stepDiv);
+            });
+
+            // Tarifs
+            const pricingCards = document.getElementById('service-pricing-cards');
+            pricingCards.innerHTML = "";
+            service.pricing.forEach(plan => {
+                const card = document.createElement('div');
+                card.className = `pricing-card ${plan.best ? 'highlight' : ''}`;
+
+                let featuresHTML = "";
+                plan.features.forEach(feat => {
+                    featuresHTML += `<li><i class="fas fa-check"></i> ${feat}</li>`;
+                });
+
+                card.innerHTML = `
+                    <h3>${plan.name}</h3>
+                    <div class="price">${plan.price}</div>
+                    <ul>${featuresHTML}</ul>
+                    ${plan.best ? '<div class="best-value">Meilleur rapport qualité/prix</div>' : ''}
+                    <a href="index.html#contact" class="btn">Choisir ce plan</a>
+                `;
+                pricingCards.appendChild(card);
+            });
+
+            // Projets similaires
+            const projectsGrid = document.getElementById("related-projects-grid");
+            projectsGrid.innerHTML = "";
+            service.relatedProjects.forEach(projectId => {
+                const projectCard = document.createElement('div');
+                projectCard.className = 'related-project';
+                projectCard.innerHTML = `
+                    <div class="project-image" style="display:none">
+                        <img src="images/code${projectId+1}.jpg" alt="Projet similaire">
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Projet ${projectId}</h3>
+                        <button class="btn-project">Voir plus</button>
+                    </div>
+                `;
+                projectsGrid.appendChild(projectCard);
+            });
+        } else {
+            window.location.href = 'index.html#services';
+        }
+    });
+    </script>
+
+        <!-- Bouton WhatsApp flottant -->
+        <div class="whatsapp-float">
+            <a href="https://wa.me/+221782022001?text=Bonjour%20WebVision,%20je%20suis%20intéressé%20par%20vos%20services" 
+            target="_blank" 
+            class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i>
+            <span class="whatsapp-tooltip">Contactez-nous</span>
+            </a>
+        </div>
+</body>
+</html>

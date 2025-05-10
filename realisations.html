@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebVision Sénégal - Nos Réalisations</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="realisations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="images/icone-site-web1.webp" alt="" class="logo"></a>
+        <i class="fa-solid fa-bars menu" id="menu-toggle"></i>
+        <nav class="navbar" id="navbar">
+            <a href="index.html#accueil">Accueil</a>
+            <a href="index.html#a-propos">À propos</a>
+            <a href="indexhtml#services">Services</a>
+            <a href="index.html#realisations">Réalisations</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="portfolio-hero">
+            <div class="hero-content">
+                <h1>Nos Réalisations</h1>
+                <p>Découvrez nos projets phares réalisés pour des clients au Sénégal et en Afrique</p>
+                <div class="scroll-indicator">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filtres -->
+        <section class="filters-section">
+            <div class="container">
+                <h2>Explorez nos projets</h2>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">Tous</button>
+                    <button class="filter-btn" data-filter="web">Développement Web</button>
+                    <button class="filter-btn" data-filter="design">Design Graphique</button>
+                    <button class="filter-btn" data-filter="marketing">Marketing Digital</button>
+                    <button class="filter-btn" data-filter="senegal">Projets Sénégal</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Grid -->
+        <section class="portfolio-grid-section">
+            <div class="container">
+                <div class="portfolio-grid" id="portfolio-grid">
+                    <!-- Projet 1 -->
+                    <div class="portfolio-item" data-category="web senegal">
+                        <div class="portfolio-image">
+                            <img src="images/img-hopital.png" alt="Site web pour l'Hôpital Saint-Vincent">
+                            <div class="portfolio-overlay">
+                                <div class="overlay-content">
+                                    <h3>Hôpital Jamm dji</h3>
+                                    <p>Site vitrine pour un hôpital à Dakar</p>
+                                    <button class="btn-view">Voir le projet</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>Hôpital Jamm dji</h3>
+                            <span>Développement Web</span>
+                        </div>
+                    </div>
+
+                    <!-- Projet 2 -->
+                    <div class="portfolio-item" data-category="design senegal">
+                        <div class="portfolio-image">
+                            <img src="images/calebasse-locale.jpeg" alt="Identité visuelle pour Café Touba">
+                            <div class="portfolio-overlay">
+                                <div class="overlay-content">
+                                    <h3>Calebasse Locale</h3>
+                                    <p>Identité visuelle complète</p>
+                                    <button class="btn-view">Voir le projet</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>Calebasse Locale</h3>
+                            <span>Logo</span>
+                        </div>
+                    </div>
+
+                    <!-- Projet 3 -->
+                    <div class="portfolio-item" data-category="design">
+                        <div class="portfolio-image">
+                            <img src="images/kns.jpeg" alt="Campagne marketing pour JokkoSante">
+                            <div class="portfolio-overlay">
+                                <div class="overlay-content">
+                                    <h3>KNS</h3>
+                                    <p>Stratégie digitale complète</p>
+                                    <button class="btn-view">Voir le projet</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>KNS</h3>
+                            <span>Logo</span>
+                        </div>
+                    </div>
+
+                    <!-- Projet 4 -->
+                    <div class="portfolio-item" data-category="web senegal">
+                        <div class="portfolio-image">
+                            <img src="images/img-architecture.png" alt="Plateforme e-commerce pour MaamSama">
+                            <div class="portfolio-overlay">
+                                <div class="overlay-content">
+                                    <h3>MaamSama</h3>
+                                    <p>Site Architecture</p>
+                                    <button class="btn-view">Voir le projet</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>Architecture Batimat</h3>
+                            <span>Développement Web</span>
+                        </div>
+                    </div>
+
+                    <!-- Projet 5 -->
+                    <div class="portfolio-item" data-category="design">
+                        <div class="portfolio-image">
+                            <img src="images/act.jpeg" alt="Packaging pour Baobab Foods">
+                            <div class="portfolio-overlay">
+                                <div class="overlay-content">
+                                    <h3>ACT</h3>
+                                    <p>Logo</p>
+                                    <button class="btn-view">Voir le projet</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>ACT (Afrika Construction & Transport)</h3>
+                            <span>Logo</span>
+                        </div>
+                    </div>
+
+                    <!-- Projet 6 -->
+                    <div class="portfolio-item" data-category="web marketing senegal">
+                        <div class="portfolio-image">
+                            <img src="images/img-blog.png" alt="Application mobile pour transport Dakar">
+                            <div class="portfolio-overlay">
+                                <div class="overlay-content">
+                                    <h3>Creation de contenus</h3>
+                                    <p>Site Vitrine</p>
+                                    <button class="btn-view">Voir le projet</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>Blog createur contenu</h3>
+                            <span>Site Vitrine</span>
+                        </div>
+                    </div>
+
+                    <!-- Projet 7 -->
+                    <div class="portfolio-item" data-category="design senegal">
+                        <div class="portfolio-image">
+                            <img src="images/amc.jpeg" alt="Identité visuelle pour festival de jazz">
+                            <div class="portfolio-overlay">
+                                <div class="overlay-content">
+                                    <h3>Arafat Menuiserie Construction</h3>
+                                    <p>Identité visuelle du festival</p>
+                                    <button class="btn-view">Voir le projet</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>Arafat Menuiserie Construction</h3>
+                            <span>Logo</span>
+                        </div>
+                    </div>
+
+                    <!-- Projet 8 -->
+                    <div class="portfolio-item" data-category="web">
+                        <div class="portfolio-image">
+                            <img src="images/img-auto.png" alt="Site corporate pour groupe financier">
+                            <div class="portfolio-overlay">
+                                <div class="overlay-content">
+                                    <h3>Groupe Financier WAO</h3>
+                                    <p>Site corporate</p>
+                                    <button class="btn-view">Voir le projet</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>Vente et Location de Vehicules</h3>
+                            <span>Développement Web</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="load-more">
+                    <button id="load-more-btn" class="btn">Charger plus de projets</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <h2>Prêt à concrétiser votre projet ?</h2>
+                <p>Contactez-nous pour discuter de votre projet et obtenir un devis personnalisé</p>
+                <a href="index.html#contact" class="btn">Demander un devis</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>Kerguitek Sénégal</h3>
+                <p>Votre partenaire pour des solutions digitales innovantes et créatives.</p>
+                <div class="footer-logo">
+                    <span>Kergui</span>tek
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Liens rapides</h3>
+                <ul>
+                    <li><a href="index.html#accueil">Accueil</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="realisations.html">Réalisations</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact</h3>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Parcelles Assainies U9, Dakar</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <p>+221 78 202 20 01</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>kerguitek.221@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-social" style="display: none;">
+                <h3>Suivez-nous</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Kerguitek Sénégal. Tous droits réservés.</p>
+            <div class="legal-links" style="display: none;">
+                <a href="#">Confidentialité</a>
+                <a href="#">Conditions</a>
+                <a href="#">Cookies</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-gallery">
+                <!-- Images will be added dynamically -->
+            </div>
+            <div class="modal-info">
+                <h3 id="modal-title">Titre du projet</h3>
+                <div class="project-meta">
+                    <span class="project-date"><i class="far fa-calendar-alt"></i> Janvier 2023</span>
+                    <span class="project-client"><i class="far fa-user"></i> Client: Hôpital Saint-Vincent</span>
+                    <span class="project-location"><i class="fas fa-map-marker-alt"></i> Dakar, Sénégal</span>
+                </div>
+                <p id="modal-description">Description détaillée du projet...</p>
+                <div class="modal-technologies">
+                    <!-- Technologies will be added dynamically -->
+                </div>
+                <a href="#" class="btn" id="project-link" style="display: none;">Visiter le projet</a>
+            </div>
+        </div>
+    </div>
+    <script src="realisations.js"></script>
+    <script src="script.js"></script>
+    <!-- Bouton WhatsApp flottant -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/+221782022001?text=Bonjour%20WebVision,%20je%20suis%20intéressé%20par%20vos%20services" 
+        target="_blank" 
+        class="whatsapp-btn">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">Contactez-nous</span>
+        </a>
+    </div>
+</body>
+</html>
